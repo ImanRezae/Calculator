@@ -206,7 +206,7 @@ function append(char) {
 function deleteChar() {
   let charLen = [...input.value];
   
-  let char = charLen.pop();
+  charLen.pop();
   input.value = charLen.join("");
   
 }
