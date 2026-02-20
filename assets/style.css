@@ -60,6 +60,8 @@ body{
     box-shadow: 0 0 10px rgba(48, 163, 230, 0.5);
     transform: scale(1.03);
 }
+.input1::placeholder{color: white;}
+
 .mod{
     width: 70px;
     height: 70px;

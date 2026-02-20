@@ -136,7 +136,7 @@ function type() {
   });
 
   clear.addEventListener("click", () => {
-    input.value = "";
+    input.value = 0;
     clear.classList.remove('scale');
     setTimeout(() => {
   clear.classList.add('scale')
@@ -200,6 +200,12 @@ function append(char) {
   if (oprators.includes(char) && oprators.includes(lastChar) ) {
     return;
   }
+  if(input.value == "0") {
+    let charLen = [...input.value];
+    charLen.pop();
+    input.value = charLen.join("");
+    
+  }
   input.value += char;
 }
 
@@ -208,7 +214,10 @@ function deleteChar() {
   
   charLen.pop();
   input.value = charLen.join("");
-  
+  if (input.value == "") {
+    input.value = "0";
+    
+  }
 }
 
 function semmetrical() {
@@ -227,6 +236,5 @@ function setAudator(char) {
   }
   input.value += char;
 }
-
 
 type();
